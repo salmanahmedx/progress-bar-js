@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    width: 100vw;
-    height: 100vh;
-}
 
 .buttons,
 .bars {
@@ -23,6 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .bar {
@@ -49,4 +46,20 @@ body {
 .btn:hover {
     background-color: black;
     color: white;
+}
+
+.progress-bar {
+    background-color: green;
+    position: absolute;
+    width: 0;
+    height: 5px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -5;
+    transition: .2s all ease-in-out;
+}
+
+.bars {
+    position: relative;
 }
